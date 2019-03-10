@@ -14,10 +14,10 @@ import pigpio
 
 # Define firebase variables
 config = {
-	"apiKey": "AIzaSyD9XuaSinw3xkdU-cR9u1lcv7WE8RkSDkM",
-	"authDomain": "pipe-a7b56.firebaseapp.com",
-	"databaseURL": "https://pipe-a7b56.firebaseio.com",
-	"storageBucket": "pipe-a7b56.appspot.com"
+	"apiKey": INSERT YOUR KEY,
+	"authDomain": INSERT YOUR DOMAIN,
+	"databaseURL": INSERT YOUR DATABASE URL,
+	"storageBucket": YOURDATABASE.appspot.com
 }
 print("Connecting to firebase..")
 
