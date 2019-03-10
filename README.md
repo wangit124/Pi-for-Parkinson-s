@@ -1,2 +1,3 @@
 # Assistive-Spoon-for-Parkinson-s
-Introducing PiPE, an assistive anti-tremor handle for patients of Parkinson's disease. UCSD ECE Design Competition 2019 
+IEEE Quarterly Projects Team 19
+By Howard Wang, Jeromey Klein, Eric Xiao

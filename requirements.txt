@@ -1,1 +1,12 @@
+# COMMANDS TO EXECUTE BEFORE YOU START USING PROGRAM
 
+# For reading live data
+pyrebase (NOTE: use pip3 install instead of pip install)
+
+# Other modules
+requests
+smbus
+time
+math
+time
+pigpio
