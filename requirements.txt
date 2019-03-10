@@ -9,4 +9,4 @@ smbus
 time
 math
 time
-pigpio
+pigpio (This is for jitter-free servos! :) )
