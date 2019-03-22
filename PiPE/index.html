@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PiPE</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/init.js"></script>
 
-  </head>
-  <body>
-      <div class="container" id="navbar">
-        <ul>
-          <li class="one"><a href="index.html">PiPE</a></li><!--
-       --><li class="two"><a href="html/device.html">Device</a></li><!--
-       --><li class="three"><a href="html/documents.html">Documents</a></li>
-          <hr />
-        </ul>
-      </div>
-    
-      <div class="logo">
-      <!---SVG PIPE LOGO-->
-      <svg class="pipelogo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="50%" height="50%" viewBox="0 0 700.000000 1078.000000" preserveAspectRatio="xMidYMid meet">
-        <metadata>
+<head>
+  <meta charset="utf-8">
+  <title>PiPE</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/init.js"></script>
+
+</head>
+
+<body>
+  <div class="container" id="navbar">
+    <ul>
+      <li class="one"><a href="index.html">PiPE</a></li>
+      <li class="two"><a href="html/device.html">Device</a></li>
+      <li class="three"><a href="Documents/QP_19_Project.pdf">Documentation</a></li>
+      <hr />
+    </ul>
+  </div>
+
+  <div class="logo">
+    <!---SVG PIPE LOGO-->
+    <svg class="pipelogo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="50%" height="50%"
+      viewBox="0 0 700.000000 1078.000000" preserveAspectRatio="xMidYMid meet">
+      <metadata>
         Created by potrace 1.12, written by Peter Selinger 2001-2015
-        </metadata>
-        <g transform="translate(0.000000,1078.000000) scale(0.100000,-0.100000)">
+      </metadata>
+      <g transform="translate(0.000000,1078.000000) scale(0.100000,-0.100000)">
         <path class="path-1" stroke="#000000" stroke-width="100" d="M3410 10721 c-44 -14 -104 -48 -128 -73 -31 -34 -436 -842 -466 -931
         -11 -34 -35 -30 -89 15 -71 60 -174 125 -280 176 -97 47 -134 61 -357 134 -85
         28 -200 66 -255 85 -55 19 -113 39 -130 44 -16 5 -77 25 -133 44 -114 38 -166
@@ -106,53 +109,55 @@
         11 -1084 3z"></path>
         <path class="letter-i" stroke="#000000" stroke-width="100" d="M2665 1268 c-3 -7 -4 -290 -3 -628 l3 -615 110 0 110 0 0 625 0 625
         -108 3 c-80 2 -109 -1 -112 -10z"></path>
-        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container" id="about">
+    <div class="fade">
+      <h1>Pi</h1>
+    </div>
+    <div class="fade">
+      <p>"Using Raspberry Pi technology, we created..."</p>
+    </div>
+    <div class="fade">
+      <h1>for</h1>
+    </div>
+    <div class="fade">
+      <h1>Parkinson's</h1>
+    </div>
+    <div class="fade">
+      <p>"A helpful tool for patients with Parkinson's disease."</p>
+    </div>
+    <div class="fade">
+      <h1>Effort</h1>
+    </div>
+    <div class="fade">
+      <p>"Introducing PiPE, a Parkinson's medical aid device that uses embedded Pi technology to provide stability and
+        comfort!"</p>
+    </div>
+  </div>
+
+  <div class="container" id="device">
+    <img id="device-image" width="100%" height="100%" src="images/device(down).png">
+  </div>
+
+  <div class="container">
+    <img id="device-vertical" width="100%" height="90%" src="images/device.png">
+
+    <!--PUT A DEMO VIDEO HERE-->
+
+    <div class="svg-wrapper">
+      <svg height="70" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="70" width="320" />
       </svg>
+      <div class="text"><a href="html/device.html">Dashboard</a></div>
     </div>
 
-    <div class="container" id="about">
-        <div class="fade">
-            <h1>Pi</h1>
-        </div>
-        <div class="fade">
-            <p>"Using Raspberry Pi technology, we created..."</p>
-        </div>
-        <div class="fade">
-            <h1>for</h1>
-        </div>
-        <div class="fade">
-            <h1>Parkinson's</h1>
-        </div>
-        <div class="fade">
-            <p>"A helpful tool for patients with Parkinson's disease."</p>
-        </div>
-        <div class="fade">
-            <h1>Effort</h1>
-        </div>
-        <div class="fade">
-            <p>"Introducing PiPE, a Parkinson's medical aid device that uses embedded Pi technology to provide stability and comfort!"</p>
-        </div>
-    </div>
+    <h3>IEEE QP Team PIPE 2019 &copy;</h3>
+    <br><br>
+  </div>
 
-    <div class="container" id="device">
-        <img id="device-image" width="100%" height="100%" src="images/device(down).png">
-    </div>
+</body>
 
-    <div class="container" >
-        <img id="device-vertical" width="100%" height="90%" src="images/device.png">      
-        
-        <!--PUT A DEMO VIDEO HERE-->
-        
-        <div class="svg-wrapper">
-          <svg height="70" width="320" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shape" height="70" width="320" />
-          </svg>
-          <div class="text"><a href="html/device.html">Dashboard</a></div> 
-        </div>
-        
-        <h3>IEEE QP Team PIPE 2019 &copy;</h3>
-        <br><br>
-    </div>
-    
-  </body>
 </html>
