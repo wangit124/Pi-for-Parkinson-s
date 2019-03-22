@@ -93,7 +93,17 @@ $(document).ready(function () {
 
       $.post("../php/save_data.php", myJSON, function(data) {
           alert("Thank you for registering!");
-      })
+      });
+
+      var html = '<p>Name: ' + name + '<br>'
+      + 'D.O.B: ' + DOB + '<br>'
+      + 'Blood Type: ' + Btype + '<br>'
+      + 'Family Members: ' + Family + '<br>'
+      + 'Occupation: ' + Job + '<br>'
+      + 'Medical History: ' + Medical + '<br>'
+      + 'Symptoms: ' + Symptoms + '<br>';
+
+      $(".info").html(html);
     }
     else {
       // check invalid login
@@ -101,20 +111,20 @@ $(document).ready(function () {
         alert("Invalid login: Incorrect Username/Password.");
         return false;
       }
-    }
-
-    $.getJSON("../JSON/credentials.json", function(data){
+   
+      $.getJSON("../JSON/credentials.json", function(data){
         var html = '<p>Name: ' + data.username + '<br>'
-      + 'D.O.B: ' + data.password + '<br>'
-      + 'Blood Type: ' + data.blood + '<br>'
-      + 'Family Members: ' + data.family + '<br>'
-      + 'Occupation: ' + data.occupation + '<br>'
-      + 'Medical History: ' + data.occupation + '<br>'
-      + 'Symptoms: ' + data.symptoms + '<br>';
+       + 'D.O.B: ' + data.password + '<br>'
+       + 'Blood Type: ' + data.blood + '<br>'
+       + 'Family Members: ' + data.family + '<br>'
+       + 'Occupation: ' + data.occupation + '<br>'
+       + 'Medical History: ' + data.occupation + '<br>'
+       + 'Symptoms: ' + data.symptoms + '<br>';
 
-      $(".info").html(html);
-    });
-
+       $(".info").html(html);
+      });
+    }
+   
     //Cancel the link behavior
     e.preventDefault();
 
@@ -124,6 +134,9 @@ $(document).ready(function () {
     // Store user session
     sessionStorage.setItem("userAuth", username);
     sessionStorage.setItem("passAuth", password);
+    
+    // reload page
+    location.reload(true);
   });
 });
 

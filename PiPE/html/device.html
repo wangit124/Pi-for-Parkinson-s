@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>PiPE</title>
@@ -10,13 +11,14 @@
     src="http://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.theme.fusion.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src ="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
   <script src="../js/init.js"></script>
   <script src="../js/chart.js"></script>
   <script src="../js/usage.js"></script>
 
 </head>
 <div id="mask"></div>
+
 <body>
 
   <div class="container" id="navbar">
@@ -38,25 +40,27 @@
         </ul>
       </div>
 
-      <div class = "myform log-in">
-          <br><br>Enter Your Credentials to Sign In*<br><br>
-          <div class="grid">
-              <form class="form login">
-                <div class="form__field">
-                  <input id="login_username" type="text" name="username" class="form__input" placeholder="First Name" required>
-                </div>
-                <div class="form__field">
-                    <input id="login_password" type="password" name="DOB" class="form__input" placeholder="D.O.B. [mm/dd/yyyy]" required>
-                </div>
-                <div class="form__field">
-                    <input type="submit" class="close signin" value="Log In">
-                </div>
-              </form>
-          </div>
-          <br><br>*Currently Supports Only 1 User Session
+      <div class="myform log-in">
+        <br><br>Enter Your Credentials to Sign In*<br><br>
+        <div class="grid">
+          <form class="form login">
+            <div class="form__field">
+              <input id="login_username" type="text" name="username" class="form__input" placeholder="First Name"
+                required>
+            </div>
+            <div class="form__field">
+              <input id="login_password" type="password" name="DOB" class="form__input"
+                placeholder="D.O.B. [mm/dd/yyyy]" required>
+            </div>
+            <div class="form__field">
+              <input type="submit" class="close signin" value="Log In">
+            </div>
+          </form>
+        </div>
+        <br><br>*Currently Supports Only 1 User Session
       </div>
 
-      <div class = "myform sign-up">
+      <div class="myform sign-up">
         Register With Your Medical Information<br><br>
         <div class="grid">
           <form class="form login">
@@ -65,7 +69,8 @@
             </div>
 
             <div class="form__field">
-              <input id="login_dob" type="text" name="d.o.b" class="form__input" placeholder="D.O.B. [mm/dd/yyyy]" required>
+              <input id="login_dob" type="text" name="d.o.b" class="form__input" placeholder="D.O.B. [mm/dd/yyyy]"
+                required>
             </div>
 
             <div class="form__field">
@@ -88,7 +93,8 @@
             </div>
 
             <div class="form__field">
-              <input id="login_symptoms" type="text" name="symptoms" class="form__input" placeholder="Current Symptoms" required>
+              <input id="login_symptoms" type="text" name="symptoms" class="form__input" placeholder="Current Symptoms"
+                required>
             </div>
 
             <div class="form__field">
@@ -100,8 +106,6 @@
       </div>
     </div>
   </div>
-
-  <div id="results"></div>
 
   <div class="dashboard-col">
     <div id="usage">
@@ -298,4 +302,5 @@
 
   <h3>IEEE QP Team PIPE 2019 &copy;</h3>
 </body>
+
 </html>

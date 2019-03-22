@@ -83,7 +83,7 @@
           padding-right: 0;
   }
 
-  #mini-nav ul li a{
+  #mini-nav ul li a {
           color: #000;
           display: inline-block;
           padding-bottom: 10px;
@@ -96,7 +96,7 @@
           line-height: 10px;
   }
 
-  #mini-nav ul li a:hover{
+  #mini-nav ul li a:hover {
           border-bottom: #000 4px solid;
           -webkit-transition: 0.1s;
           transition: 0.1s;
@@ -220,8 +220,8 @@
           width: 45%;
           height: 100%;
           color: #f0efef;
-          overflow-y:scroll;
-          overflow-x:hidden;
+          overflow-y: scroll;
+          overflow-x: hidden;
   }
 
   #usage p {
@@ -234,10 +234,10 @@
 
   .numbers {
           width: 80%;
-          height:10px;
+          height: 10px;
           padding-left: 10%;
   }
-  
+
   .align {
           -webkit-box-align: center;
           -ms-flex-align: center;
@@ -478,34 +478,37 @@
   }
 
   @media screen and (min-width: 400px) {
-        .numbers div {
-                font-size: 25px;
-        }
-        p {
-                font-size: 20px;
-        }
-        #usage p {
-                margin-top: 25%;
-                font-size: 7px;
-        }
-        h1 {
-                font-size: 70px;
-        }
-        .info p {
-              font-size: 15px;
-        }
-  }
-  @media screen and (max-width: 500px) {
-          .info p{
-                font-size: 10px;
+          .numbers div {
+                  font-size: 25px;
+          }
+          p {
+                  font-size: 20px;
+          }
+          #usage p {
+                  margin-top: 25%;
+                  font-size: 7px;
+          }
+          h1 {
+                  font-size: 70px;
+          }
+          .info p {
+                  font-size: 15px;
           }
   }
+
+  @media screen and (max-width: 500px) {
+          .info p {
+                  font-size: 10px;
+          }
+  }
+
   @media screen and (min-width: 500px) {
-        #usage p {
-                margin-top: 25%;
-                font-size: 10px;
-        }
-}
+          #usage p {
+                  margin-top: 25%;
+                  font-size: 10px;
+          }
+  }
+
   @media screen and (min-width: 800px) {
           .numbers div {
                   font-size: 40px;
