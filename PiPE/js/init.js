@@ -160,11 +160,11 @@ $(window).on("load", function () {
 
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyD9XuaSinw3xkdU-cR9u1lcv7WE8RkSDkM",
-  authDomain: "pipe-a7b56.firebaseapp.com",
-  databaseURL: "https://pipe-a7b56.firebaseio.com",
-  projectId: "pipe-a7b56",
-  storageBucket: "pipe-a7b56.appspot.com",
-  messagingSenderId: "117373168037"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 };
 firebase.initializeApp(config);
