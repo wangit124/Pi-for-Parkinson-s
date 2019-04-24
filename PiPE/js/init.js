@@ -6,14 +6,14 @@ $(document).ready(function () {
 
   // check if current session is active
   if (sessionStorage.getItem("userAuth") && sessionStorage.getItem("passAuth")) {
-    $.getJSON("../JSON/credentials.json", function(data){
-        var html = '<p>Name: ' + data.username + '<br>'
-      + 'D.O.B: ' + data.password + '<br>'
-      + 'Blood Type: ' + data.blood + '<br>'
-      + 'Family Members: ' + data.family + '<br>'
-      + 'Occupation: ' + data.occupation + '<br>'
-      + 'Medical History: ' + data.occupation + '<br>'
-      + 'Symptoms: ' + data.symptoms + '<br>';
+    $.getJSON("../JSON/credentials.json", function (data) {
+      var html = '<p>Name: ' + data.username + '<br>'
+        + 'D.O.B: ' + data.password + '<br>'
+        + 'Blood Type: ' + data.blood + '<br>'
+        + 'Family Members: ' + data.family + '<br>'
+        + 'Occupation: ' + data.occupation + '<br>'
+        + 'Medical History: ' + data.occupation + '<br>'
+        + 'Symptoms: ' + data.symptoms + '<br>';
 
       $(".info").html(html);
     });
@@ -30,25 +30,25 @@ $(document).ready(function () {
   //transition effect
   $(id).fadeIn(700);
 
-  $(".login-form").click(function(){
+  $(".login-form").click(function () {
     $(".log-in").show();
     $(".sign-up").hide();
   });
-  
-  $(".signup-form").click(function(){
+
+  $(".signup-form").click(function () {
     $(".log-in").hide();
     $(".sign-up").show();
   });
 
   // Retrieve credentials
-  $.getJSON("../JSON/credentials.json", function(data){
+  $.getJSON("../JSON/credentials.json", function (data) {
     userAuth = data.username;
     passAuth = data.password;
   });
 
   //if close button is clicked
   $('.close').click(function (e) {
-    
+
     var name = $("#login_name").val();
     var DOB = $("#login_dob").val();
     var Btype = $("#login_blood").val();
@@ -63,8 +63,8 @@ $(document).ready(function () {
     if ($(this).hasClass("signup")) {
       if (name == "" || DOB == "" ||
         Btype == "" || Family == "" ||
-        Job == "" || Medical == "" || 
-        Symptoms == "" ) {
+        Job == "" || Medical == "" ||
+        Symptoms == "") {
         alert("Invalid login: missing field.");
         return false;
       }
@@ -89,19 +89,19 @@ $(document).ready(function () {
       user1["medical"] = Medical;
       user1["symptoms"] = Symptoms;
 
-      var myJSON = {users : user1};
+      var myJSON = { users: user1 };
 
-      $.post("../php/save_data.php", myJSON, function(data) {
-          alert("Thank you for registering!");
+      $.post("../php/save_data.php", myJSON, function (data) {
+        alert("Thank you for registering!");
       });
 
       var html = '<p>Name: ' + name + '<br>'
-      + 'D.O.B: ' + DOB + '<br>'
-      + 'Blood Type: ' + Btype + '<br>'
-      + 'Family Members: ' + Family + '<br>'
-      + 'Occupation: ' + Job + '<br>'
-      + 'Medical History: ' + Medical + '<br>'
-      + 'Symptoms: ' + Symptoms + '<br>';
+        + 'D.O.B: ' + DOB + '<br>'
+        + 'Blood Type: ' + Btype + '<br>'
+        + 'Family Members: ' + Family + '<br>'
+        + 'Occupation: ' + Job + '<br>'
+        + 'Medical History: ' + Medical + '<br>'
+        + 'Symptoms: ' + Symptoms + '<br>';
 
       $(".info").html(html);
     }
@@ -111,20 +111,20 @@ $(document).ready(function () {
         alert("Invalid login: Incorrect Username/Password.");
         return false;
       }
-   
-      $.getJSON("../JSON/credentials.json", function(data){
-        var html = '<p>Name: ' + data.username + '<br>'
-       + 'D.O.B: ' + data.password + '<br>'
-       + 'Blood Type: ' + data.blood + '<br>'
-       + 'Family Members: ' + data.family + '<br>'
-       + 'Occupation: ' + data.occupation + '<br>'
-       + 'Medical History: ' + data.occupation + '<br>'
-       + 'Symptoms: ' + data.symptoms + '<br>';
 
-       $(".info").html(html);
+      $.getJSON("../JSON/credentials.json", function (data) {
+        var html = '<p>Name: ' + data.username + '<br>'
+          + 'D.O.B: ' + data.password + '<br>'
+          + 'Blood Type: ' + data.blood + '<br>'
+          + 'Family Members: ' + data.family + '<br>'
+          + 'Occupation: ' + data.occupation + '<br>'
+          + 'Medical History: ' + data.occupation + '<br>'
+          + 'Symptoms: ' + data.symptoms + '<br>';
+
+        $(".info").html(html);
       });
     }
-   
+
     //Cancel the link behavior
     e.preventDefault();
 
@@ -134,7 +134,7 @@ $(document).ready(function () {
     // Store user session
     sessionStorage.setItem("userAuth", username);
     sessionStorage.setItem("passAuth", password);
-    
+
     // reload page
     location.reload(true);
   });

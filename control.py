@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 
+import pigpio
+from time import sleep
+import math
+import time
+import smbus
+import requests
 print("Importing modules (please be patient)...")
 # import necessary python modules
 # import pyrebase
 
 #from firebase import firebase
-import requests
-import smbus
-import time
-import math
-from time import sleep
-import pigpio
 
 # Define firebase variables
 config = {
@@ -21,7 +21,7 @@ config = {
 }
 print("Connecting to firebase..")
 
-#firebase = firebase.FirebaseApplication('https://pipe-a7b56.firebaseio.com') 
+#firebase = firebase.FirebaseApplication('https://pipe-a7b56.firebaseio.com')
 #firebase = pyrebase.initialize_app(config)
 #db = firebase.database()
 
@@ -51,6 +51,8 @@ value = 0
 value2 = 0
 
 # Initialize IMU values and database values
+
+
 def init():
 	print("Initializing program...")
 	bus.write_byte_data(Device_Address, SMPLRT_DIV, 7)
@@ -70,16 +72,18 @@ def init():
 #	db.update(jsonNS)
 
 	print("Set program time to 0")
-	jsonCurr = {"current":PROG_TIME}
+	jsonCurr = {"current": PROG_TIME}
 #	db.update(jsonCurr)
 
 # Store global json data
+
+
 def storeJSON():
 
 	# Increment program timer
 	print(" ")
 	print("Program time (s) = " + str(PROG_TIME))
-	jsonCurr2 = {"current":PROG_TIME}
+	jsonCurr2 = {"current": PROG_TIME}
 	db.update(jsonCurr2)
 	print("Storing data plot: " + str(key))
 
@@ -87,10 +91,12 @@ def storeJSON():
 	duration = db.child("total").get()
 	duration = duration.val() + 1
 	print("Total Duration of program: " + str(duration))
-	jsonTotal = {"total":duration}
+	jsonTotal = {"total": duration}
 	db.update(jsonTotal)
 
 # Store stability factor
+
+
 def storeStat(var1, var2, var3):
 
     # Post stability factor to firebase
@@ -102,11 +108,12 @@ def storeStat(var1, var2, var3):
 	data = str(stabilityF)
 	label = str(PROG_TIME)
 
-	jsonPlot = {"label":label, "value":data}
+	jsonPlot = {"label": label, "value": data}
 
 	index = str(var3)
 
 	db.child("data").child(index).set(jsonPlot)
+
 
 # Store device address
 bus = smbus.SMBus(1)
@@ -152,7 +159,7 @@ while True:
 	prevVal = value
 
     # Round to nearest 5 to increase stability
-	value2 = value2 - (value2%5)
+	value2 = value2 - (value2 % 5)
 
     # Convert value to servo pulse width
 	if -60 <= value <= 60:
@@ -170,7 +177,7 @@ while True:
 		value2 = bus.read_byte_data(Device_Address, ACCEL_YOUT_H)
 		initial += 100
 		initial %= 2500
-		if 500<=initial<=2500:
+		if 500 <= initial <= 2500:
 			print("Servo2 Position: " + str(initial))
 			pi.set_servo_pulsewidth(servo2, initial)
 		sleep(0.1)
